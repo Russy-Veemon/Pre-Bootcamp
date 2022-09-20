@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="DojoWeather.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="header">
+            <ul class="header">
+                <li class="pagetitle">DojoWeather</li>
+                <li>
+                    <div class="pickcity">
+                            <li><a id="pickcity" href="#" onclick="cityweather()">Burbank</a></li>
+                            <li><a id="pickcity" href="#" onclick="cityweather()">Chicago</a></li>
+                            <li><a id="pickcity" href="#" onclick="cityweather()">Dallas</a></li>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainpage">
+        <div class="subheader">
+            <div class="currentlocation">
+                <h1>San Jose</h1>
+            </div>
+            <div class="typedisplay">
+                <p>show temperatue in </p>
+                <select name="temperature" id="temp" onchange="convert(this)">
+                    <option value="Celsius" >C°</option>
+                    <option value="Faranheit" >F°</option>
+                </select>
+            </div>
+        </div>
+        <div class="temptoday">
+            <div class="dailyweather">
+                <h1>Today</h1>
+                <img src="assets/some_rain.png" id="assets">
+                <h3>some rain</h3>
+                <div class="highnlow">
+                    <h2 class="temphigh-1" id="temp1">24°</h2>
+                    <h2 class="templow-1" id="temp2">18°</h2>
+                </div>
+            </div>
+            <div class="dailyweather">
+                <h1>Tomorrow</h1>
+                <img src="assets/some_sun.png" id="assets">
+                <h3>some sun</h3>
+                <div class="highnlow">
+                    <h2 class="temphigh-2" id="temp3">27°</h2>
+                    <h2 class="templow-2" id="temp4">19°</h2>
+                </div>
+            </div>
+            <div class="dailyweather">
+                <h1>Friday</h1>
+                <img src="assets/some_clouds.png" id="assets">
+                <h3>some clouds</h3>
+                <div class="highnlow">
+                    <h2 class="temphigh-3" id="temp7">21°</h2>
+                    <h2 class="templow-3" id="temp8">16°</h2>
+                </div>
+            </div>
+            <div class="dailyweather">
+                <h1>Saturday</h1>
+                <img src="assets/some_sun.png" id="assets">
+                <h3>some sun</h3>
+                <div class="highnlow">
+                    <h2 class="temphigh-4" id="temp9">26°</h2>
+                    <h2 class="templow-4" id="temp10">21°</h2>
+                </div>
+            </div>
+        </div>
+        <div id="popup">
+            <div>
+                <img src="assets/cookie.png" id="cookie">
+            </div>
+            <div class="popupmessage">
+                <h1 class="popupheader">Stop! Cookie time</h1>
+                <p>We use cookies (sadly not the edible ones) to personalize content
+                    and ads, to provide social media features and to analyse our
+                    traffic. <a href="#">Read more...</a>
+                </p>
+            </div>
+            <div>
+                <button class="removepopup" onclick="accept()">I accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="DojoWeather.js"></script>
+</body>
+</html>
